@@ -1,0 +1,38 @@
+We can use the deployment strategy as rolling-update in the deployment yaml file.
+
+Step1: vi nginx-deployemnt.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx-deployment
+  namespace: madhavi-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+
+Step2: kubectl apply -f nginx-deployment.yaml -n madhavi-ns
+
+Step3: change image to bitnami/nginx ie.,(line no: 24)
+
+Step4: kubectl apply -f nginx-deployment.yaml -n madhavi-ns
+
+Step5: to check 
+kubectl get pods -n madhavi-ns
+
+Reference: kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml

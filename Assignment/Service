@@ -1,3 +1,8 @@
 First need to check whether service is created or not.
-If the service is created, then check the label in the depolyment app selector - if it is correct we can able to access the pod with the node port else we need the correct the selector
-If the service is not created, create the service then try to create the deployment with proper labels.
+Service Created
+   - Check the label in the depolyment app selector
+       if it is correct we can able to access the pod with the node port
+       else we need the correct the selector then it should work as expected
+Service Not Created
+   - Create the service then try to create the deployment with proper labels
+   - Do the above Step once Service Created

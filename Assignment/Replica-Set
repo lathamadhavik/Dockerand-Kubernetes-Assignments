@@ -1,2 +1,2 @@
-To run a daemon for logs collection on each node, such as: logstash
-To run a daemon for node monitoring on ever note, such as: Prometheus Node Exporter
+To run a daemon for logs collection on each node using the logstash
+To run a daemon for node monitoring on ever note using the Prometheus Node Exporter

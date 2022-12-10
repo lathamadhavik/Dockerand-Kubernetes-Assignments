@@ -14,6 +14,8 @@ Steps to make DB pod up
   - kubectl get all -n default
   
  Summary:
-The result app STOPPED working after db pod stop beacuse the socket connectivity of Db pod to result pod has lost.
-Recreated all the pods MADE THE RESULT POD work.
-Some jargons are docker, docker images, k8 contianers, clusters, nodes, labels, observalibilty, most used commands using kubectl, deployemnt yaml files, demon set, relpics etc.,
+- The result app STOPPED working after db pod stop beacuse the socket connectivity of Db pod to result pod has lost.
+- Recreated all the pods MADE THE RESULT POD work.
+- Some jargons are docker, docker images, k8 contianers, Controllers, clusters, nodes, labels, observalibilty, most used commands using kubectl, deployemnt yaml files, demon set, replicas,
+  Deployment using helm, Scalability, Monitoring tools - Grafana, Prometheus, Rest APIs
+ 

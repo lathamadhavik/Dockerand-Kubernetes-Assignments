@@ -1,0 +1,19 @@
+Deletion of Voter pod
+  - Pod recreated
+  - Container Id changed fron vote-94849dc97-vr7kh to vote-94849dc97-bzhmx
+  - application has no change in result or even in db the function flow is working as is (the recreated pod is taking care )
+Deletion of Worker pod
+  - new Pod created
+  - No change in the application it is working as expected
+  - no loss of data only logs are lost
+Deletion of DB pod
+  - Pod recreated
+  - The votes are not being registered we see the same result even after giving the votes, even no change after pod is up also
+Steps to make DB pod up
+  - kubectl delete pods --all -n default
+  - kubectl get all -n default
+  
+ Summary:
+The result app STOPPED working after db pod stop beacuse the socket connectivity of Db pod to result pod has lost.
+Recreated all the pods MADE THE RESULT POD work.
+Some jargons are docker, docker images, k8 contianers, clusters, nodes, labels, observalibilty, most used commands using kubectl, deployemnt yaml files, demon set, relpics etc.,
